@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sillas y bancos</title>
+    <link rel="icon" href="./img/wood_ideas_logo_solo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/css/all.min.css">
+
+    <script src="./js/cursos.js"></script>
+    <script src="./js/funcionesCarrito.js" defer></script>
+    <script src="./js/index-categorias.js" defer></script>
+    <script src="./js/contactos-scroll.js" defer></script>
+</head>
+
+
+<body><!--//////////////////////////////////////////////// Body \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    
+    <header><!--//////////////////////////////////////////// Header \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+        <div class="header-container">
+            <div class="barra-superior">
+                <!---------------------------------------- Logo ---------------------------------------->
+                <a class="logo-link" href="index.html" target="_self">
+                    <img class="logo" src="./img/wood_ideas_logo_fondo_transparente.png" alt="Wood Ideas Logo">
+                </a>
+                <!-------------------------------------------------------------------------------------->
+                
+                <!---------------------------------------- Menu ---------------------------------------->
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="index.html">Cursos pagos <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="./seccion1.html">Sillas y bancos</a></li>
+                                <li><a href="./seccion2.html">Mesas</a></li>
+                                <li><a href="./seccion3.html">Misceláneos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./seccion-formulario.html">Cursos gratuitos</a></li>
+                        <li><a href="./seccion-comprados.html">Mis compras</a></li>
+                        <li><a href="#seccion-contactos" class="scroll-suave">Contáctanos</a></li>
+                    </ul>
+                </nav>
+                <!-------------------------------------------------------------------------------------->
+                <a href="./cart.html" class="carrito-compra-container"><div class="carrito-compra"><i class="fa-solid fa-cart-shopping" id="carrito-compra-icon"></i><span id="cuenta-carrito">0</span></div></a>
+            </div>
+
+        </div>
+
+        <!------------------------------------- BreadCrumb ------------------------------------->
+        <div class="breadcrumb-container">
+            <nav class="breadcrumb">
+                <a href="./index.html" target="_self">Home</a>
+                &#62;
+                <span id="categoria">Sillas y bancos</span>
+            </nav>
+        </div>
+        <div class="separador"></div>
+        <!-------------------------------------------------------------------------------------->
+    </header><!--//////////////////////////////////////////// Header \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+        
+        
+    <div class="body-container"><!--/////////////////////////////////// .body \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+        <div class="separador">
+            <p>Nuestros cursos</p>
+        </div>
+
+        <h1 id="no-hay-nada" class="escondido">No hay nada que mostrar</h1>
+        <div id="products-container" class="products-container"></div>
+
+        <div class="escondido" id="notificacion-carrito">
+            <div class="notificacion-body"><i class="fa-solid fa-circle-check"></i>&nbsp;Producto añadido al carro</div>
+        </div>
+
+
+    </div><!--////////////////////////////////////////////// .body \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+        
+
+    
+    <footer><!--//////////////////////////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+        <div class="footer-container">
+            
+            <!--------------------------------------- Premises ------------------------------------->
+            <div class="premises-container">
+                <h3>Oficina</h3>
+                <p>1234, Schumann<br>Hurlingham, Gran Buenos Aires<br><br><span>Antes de acercarse a<br>nuestras oficinas, recuerde<br>reservar un turno previamente.</span></p>
+            </div>
+            <!-------------------------------------------------------------------------------------->
+
+            <!--------------------------------------- Contact -------------------------------------->
+            <div id="seccion-contactos" class="contact-container">
+                <h3>Contactos</h3>
+                <div class="social-icons">
+                    <i class="fab fa-instagram"><a href="#"> @woodideas.ar</a></i>
+                    <i class="fab fa-x-twitter"><a href="#"> @woodideasar</a></i>
+                    <i class="fab fa-facebook-f"><a href="#"> Wood Ideas Official</a></i>
+                    <i class="fa-solid fa-phone"><span> +54 9 11 2345-6789</span></i>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------->
+
+        </div>
+    </footer><!--//////////////////////////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+
+</body><!--//////////////////////////////////////////////// Body \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+</html>

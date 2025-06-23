@@ -1,0 +1,583 @@
+@font-face {
+    font-family: 'Comfortaa-Medium';
+    src: url(../fonts/static/Comfortaa-Medium.ttf);
+}
+@font-face {
+    font-family: 'Comfortaa-Regular';
+    src: url(../fonts/static/Comfortaa-Regular.ttf);
+}
+@font-face {
+    font-family: 'Comfortaa-Light';
+    src: url(../fonts/static/Comfortaa-Light.ttf);
+}
+:root {
+    --color-claro-fondo: #f0ebdb;
+    --color-marron-medio: #7E6146;
+    --color-marron-oscuro: #443d36;
+    --color-marron-claro: #B88A55;
+    --color-marron-claro-palido: #b89a79;
+    --color-naranja-acento: #ff782c;
+    --color-naranja-acento-oscuro: #e9671b;
+    --color-blanco-resaltado: #f0e9e3;
+    --color-marron-oscuro-oscuro: #2e2a25;
+    --color-dorado-base: #d6a110;
+    --color-dorado-borde: #b18202;
+    --color-dorado-oscuro: #be8e09;
+    --color-verde-dinero: #205514;
+    --color-spanish-gray: #9C9B92;
+}
+* {
+    color: var(--color-marron-oscuro-oscuro);
+    background-color: var(--color-claro-fondo);
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: 'Comfortaa-Light';
+    padding: 0;
+    margin: 0;
+}
+
+
+/*---------------------------------------- Links ----------------------------------------*/
+a:link, a:visited {
+    font-weight: 700;
+    color: var(--color-marron-oscuro);
+    text-decoration: none;
+}
+a:active, a:hover {
+    color: var(--color-naranja-acento);
+}
+a {
+    background: inherit;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------- IMG .SVG --------------------------------------*/
+svg {
+    fill: none;
+    background-color: inherit;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------- Header ---------------------------------------*/
+header {
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-container {
+    /* display: flex;
+    flex-direction: row;
+    align-items: start;
+    esto estaba antes de colocar display: inline-block a cada elemento
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;*/
+    
+    height: 100%;
+    width: 100%;
+    
+    background-color: var(--color-marron-medio);
+    border-bottom: var(--color-marron-claro) solid 15px;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------- Logo de la página ----------------------------------*/
+header .logo{
+    height: 80px;
+    object-fit: contain;
+    background: inherit;
+    
+    display: inline-block;
+    
+    padding: 20px 20px; /* top and bottom | left and right */
+    object-fit: contain;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------- Menu de navegación ---------------------------------*/
+.barra-superior {
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: inline-block;
+    user-select: none;
+
+    z-index: 9999;  /* esto permite que el menú desplegado se coloque por arriba de otros objetos*/
+}
+nav ul {
+    list-style: none;
+    background: var(--color-marron-medio);
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    background: inherit;
+}
+nav ul li a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    background: inherit;
+    
+    align-items: start; /* creo que no hace nada */
+}
+nav ul li ul.dropdown li {
+    display: block;
+    z-index: 9999;
+}
+nav ul li ul.dropdown {
+    width: 100%;
+    background: var(--color-marron-claro);
+    position: absolute;
+    display: none;
+    text-align: center;
+    overflow: hidden;
+}
+nav ul li a:hover {
+    background-color: inherit; /* si no le voy a agregar cosas, tengo que borrarlo */
+}
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* estilos para links dentro del navbar */
+nav.navbar a:link, nav.navbar a:visited {
+    font-weight: 700;
+    color: var(--color-blanco-resaltado);
+    text-decoration: none;
+}
+nav.navbar a:active, nav.navbar a:hover {
+    color: var(--color-naranja-acento);
+}
+
+/* estilos para ícono chevron-down */
+nav.navbar i {
+    background-color: inherit;
+    color: var(--color-blanco-resaltado);
+}
+nav ul li a:hover i {
+    color: var(--color-naranja-acento);
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------- Carrito de compras ---------------------------------*/
+a.carrito-compra-container {
+    background-color: inherit;
+    padding-right: 100px;
+    margin-left: 23px;
+}
+div.carrito-compra {
+    background-color: inherit;
+    position: relative;
+    border-radius: 50%;
+}
+div.carrito-compra i {
+    background-color: inherit;
+    color: var(--color-blanco-resaltado);
+    font-size: larger;
+}
+div.carrito-compra span {
+    position: absolute;
+    bottom: 13px;
+    background-color: var(--color-naranja-acento);
+    border-radius: 100%;
+    display: inline-block;
+    width: 15px;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    padding-top: 2px;
+    margin-left: 3px;
+    color: var(--color-blanco-resaltado);
+}
+/* estilos para links dentro del navbar */
+a.carrito-compra-container:link, a.carrito-compra-container:visited {
+    font-weight: 700;
+    color: var(--color-blanco-resaltado);
+    text-decoration: none;
+}
+a.carrito-compra-container:active, a.carrito-compra-container:hover {
+    color: var(--color-naranja-acento);
+}
+
+/* estilos para ícono chevron-down */
+a.carrito-compra-container:hover i {
+    color: var(--color-naranja-acento);
+}
+/*---------------------------------------------------------------------------------------*/
+
+/*------------------------------- Animación carrito compra ------------------------------*/
+@keyframes cart-highlight {
+    0%   { transform: scale(1); text-shadow: 0 0 0px var(--color-naranja-acento); }
+    50%  { transform: scale(1.4); text-shadow: 0 0 30px var(--color-naranja-acento); }
+    100% { transform: scale(1); text-shadow: 0 0 0px var(--color-naranja-acento); }
+}
+
+.highlight-cart {
+    animation: cart-highlight 0.8s ease-in-out 2;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------- BreadCrumb -------------------------------------*/
+header .breadcrumb-container {
+    margin: .5ex;
+    padding-left: 2em;
+    height: 20px;
+    width: 100%;
+    background-color: var(--color-claro-fondo);
+    z-index: 1;
+    user-select: none;
+}
+header .breadcrumb {
+    background-color: inherit;
+}
+header .breadcrumb a {
+    width: 100%;
+}
+header .separador {
+    height: 2px;
+    width: 98%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: var(--color-marron-claro);
+    
+    margin-bottom: 30px; /* separación hacia el contenido de la página */
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------- Body ----------------------------------------*/
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body .body-container {
+    flex-grow: 1;       /* esto permite que el contenido crezca todo lo posible, dejando el footer abajo del todo */
+    flex-shrink: 0;     /* esto hace que no se haga más pequeño */
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
+
+.body-container div.separador {
+    margin-bottom: 30px; /* separación hacia el contenido de la página */
+    margin-top: 10px;
+    border-bottom: var(--color-marron-claro) 2px solid;
+    width: 90%;
+    padding-bottom: 10px;
+}
+.body-container .separador p {
+    user-select: none;
+}
+.body-container #no-hay-nada {
+    text-align: center;
+    user-select: none;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------- Footer ---------------------------------------*/
+footer {
+    height: 140px;
+    width: 100%;
+    background-color: var(--color-marron-claro);
+    text-align: center;
+    margin-top: 30px;
+}
+footer .footer-container {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer .footer-container .contact-container, footer .footer-container .premises-container {
+    background-color: inherit;
+    margin-top: 5px;
+}
+.contact-container h3, .contact-container p, .contact-container .social-icons, .social-icons i,
+.premises-container h3, .premises-container p, .premises-container span {
+    background-color: inherit;
+    color: var(--color-marron-oscuro-oscuro);
+}
+.contact-container .social-icons a, .contact-container .social-icons span {
+    background-color: inherit;
+    font-weight: 300;
+    font-size: large;
+}
+.contact-container .social-icons span {
+    color: var(--color-marron-oscuro);
+}
+footer .contact-container .social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 30px;
+}
+.contact-container i {
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin: 5px;
+}
+.premises-container {
+    margin-right: 100px;
+}
+.contact-container {
+    margin-left: 100px;
+}
+.contact-container h3 {
+    user-select: none;
+}
+footer .premises-container p {
+    font-weight: 500;
+}
+footer .premises-container h3 {
+    margin-bottom: 7px;
+    user-select: none;
+}
+footer .premises-container span {
+    font-size: small;
+    font-weight: 400;
+    color: var(--color-marron-oscuro);
+    text-align: justify;
+    user-select: none;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------- Item-Card --------------------------------------*/
+.products-container {
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    min-width: 30%;
+}
+.card-container {
+    perspective: 1000px;
+    margin: 20px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.228);
+    background-color: rgba(59, 59, 59, 0.123);
+}
+.card-container h3 {
+    background-color: inherit;
+    margin-top: 10px;
+    color: var(--color-marron-oscuro-oscuro);
+    user-select: none;
+}
+.card {
+    position: relative;
+    z-index: 1; /* para que aparezca debajo de otros objetos */
+    width: 250px;
+    height: 320px;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    border-radius: inherit;
+}
+/* .card {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    border-radius: inherit;
+} */
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+.card .front {
+    background-color: var(--color-marron-claro-palido);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+}
+.card .back {
+    /* background-color: #9C9B92; */
+    background-color: var(--color-marron-claro-palido);
+    padding: 10px;                                          /* esto ocasiona que la parte trasera se vea más grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+.card-container .card p, .back-text p{
+    background-color: inherit;
+    margin-top: 10px;
+    padding: 10px;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.card-container .back h3 {
+    text-align: center;
+    padding-top: 10px;
+    user-select: none;
+}
+.card-container .card .back-text {
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.card-container .back button {
+    margin-bottom: 15px;
+    height: 40px;
+    width: 170px;
+    background-color: var(--color-dorado-base);
+    border: var(--color-dorado-borde) solid 2px;
+    border-radius: 5px;
+    user-select: none;
+}
+/*--------- Pequeña animación --------*/
+.card-container .back button:active {
+    transform: scale(0.96);
+}
+/*------------------------------------*/
+.card-container .back button:hover, .card-container .back button:hover i {
+    background-color: var(--color-dorado-oscuro);
+    user-select: none;
+    cursor: pointer;
+}
+.card-container .back button i {
+    background-color: inherit;
+    user-select: none;
+}
+.card-container .back .price, .card-container .back .price i {
+    background-color: inherit;
+    color: var(--color-verde-dinero);
+    margin-bottom: 8px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none;
+}
+
+/* cambiar tamaño de la imagen de la tarjeta */
+.card-container img {
+    width: 190px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    aspect-ratio: 1.5;
+    user-select: none;
+}
+.card-container .card-img-container {
+    border-radius: 30%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.228);
+}
+
+
+/* el contenedor de todos los productos */
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+.escondido {
+    display: none;
+}
+
+
+/*------------------------------------- Notificación ------------------------------------*/
+.notificacion {
+    position: absolute;
+    width: max-content;
+    left: auto; /* 0 → auto */
+    right: 0;
+    top: 135px;
+    z-index: 9999;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    background-color: var(--color-spanish-gray);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1.875rem);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 3s linear;
+    user-select: none;
+}
+.notificacion i {
+    font-size: medium;
+    background-color: inherit;
+}
+.notificacion-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-radius: inherit;
+    background-color: inherit;
+}
+.notificacion i, .notificacion-body {
+    color: var(--color-marron-oscuro-oscuro);
+}
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*---------------------------------------------------------------------------------------*/

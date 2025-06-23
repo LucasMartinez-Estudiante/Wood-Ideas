@@ -1,0 +1,157 @@
+:root {
+    --color-claro-fondo: #f0ebdb;
+    --color-marron-medio: #7E6146;
+    --color-marron-oscuro: #443d36;
+    --color-marron-claro: #B88A55;
+    --color-marron-claro-palido: #b89a79;
+    --color-naranja-acento: #ff782c;
+    --color-naranja-acento-oscuro: #e9671b;
+    --color-blanco-resaltado: #f0e9e3;
+    --color-marron-oscuro-oscuro: #2e2a25;
+    --color-dorado-base: #d6a110;
+    --color-dorado-borde: #b18202;
+    --color-dorado-oscuro: #be8e09;
+    --color-verde-dinero: #205514;
+    --color-spanish-gray: #9C9B92;
+}
+
+
+.carrito-producto-container {
+    height: 300px;
+    width: 550px;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-marron-claro-palido);
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.228);
+    transition: 200ms;
+}
+.carrito-producto-container img {
+    height: 220px;
+    width: 220px;
+    margin: 15px;
+    object-fit: contain;
+    background-color: inherit;
+    aspect-ratio: 1.5;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.228);
+}
+.carrito-producto-info {
+    background-color: inherit;
+    margin: 30px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Toma el espacio disponible */
+    justify-content: space-between;
+}
+.carrito-producto-info h3 {
+    background-color: inherit;
+    text-align: center;
+    margin-bottom: 10px;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.carrito-producto-info p {
+    background-color: inherit;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.carrito-producto-info .precio i, .carrito-producto-info .precio {
+    background-color: inherit;
+    color: var(--color-verde-dinero);
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.carrito-producto-info span {
+    background-color: inherit;
+    text-align: center;
+    font-size: 15px;
+}
+.carrito-producto-container:hover {
+    translate: 0 -5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.228);
+}
+.carrito-producto-info a {
+    background: inherit;
+    color: rgb(85, 51, 235);
+    text-align: center;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.carrito-producto-info a:active, .carrito-producto-info a:hover {
+    color: var(--color-naranja-acento);
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.carrito-producto-info .content-top, .carrito-producto-container .content-bottom {
+    background-color: inherit;
+}
+
+.content-top {
+    flex: 1; /* Toma el espacio disponible */
+}
+.content-bottom {
+    margin-top: auto; /* Empuja hacia abajo */
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.totales {
+    width: 70%;
+    height: 90px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+.totales p {
+    color: var(--color-marron-oscuro);
+}
+.totales .p-abajo {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.separador-carrito {
+    height: 2px;
+    width: 90%;
+    background: var(--color-marron-claro);
+    margin-bottom: 30px;
+}
+.totales button {
+    background-color: var(--color-naranja-acento);
+    border: var(--color-naranja-acento) solid;
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--color-blanco-resaltado);
+    font-weight: bold;
+}
+.totales button:hover {
+    background-color: var(--color-naranja-acento-oscuro);
+    border: var(--color-naranja-acento-oscuro) solid;
+    cursor: pointer;
+}
+.totales button:active {
+    transform: scale(0.96);
+}
+
+#carrito-vacio {
+    margin-bottom: 25px;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
+
+#mensaje-comprado {
+    color: var(--color-naranja-acento);
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 25px;
+    user-select: none; /* para que el usuario no pueda seleccionar el texto */
+}
