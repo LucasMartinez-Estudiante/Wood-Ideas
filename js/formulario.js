@@ -78,9 +78,11 @@ function validar() {
 
         // Checkea que sea una fecha válida
         if (!(esFechaValida(dia.value, mes.value, anio.value))){
-            dia.style.borderColor="#ff2e00"; // Aplica un borde rojo (error)
-            mes.style.borderColor="#ff2e00"; // Aplica un borde rojo (error)
-            anio.style.borderColor="#ff2e00"; // Aplica un borde rojo (error)
+            for (let i=0; i<3; i++){
+                objeto = arrayFecha[i];
+                objeto.classList.remove("input-correcto");
+                objeto.classList.add("input-error") // Aplica un borde rojo (error)
+            }
             esValido = false;
         }
     }
